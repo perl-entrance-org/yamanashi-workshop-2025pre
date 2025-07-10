@@ -20,14 +20,11 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
-# 実行するジョブを定義
 jobs:
   build-and-deploy:
-    # デプロイ先の環境情報を設定
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    # 実行環境を指定
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -35,9 +32,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: pwd
-        run: pwd
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
@@ -64,7 +58,6 @@ jobs:
         with:
           path: 'book/build'
 
-      # 8. GitHub Pagesへデプロイ
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
