@@ -30,3 +30,8 @@ ChatGPTやGeminiなどのAIを活用する方法もありますが、初学者�
 - [はじめてのTypeScript](https://www.oreilly.co.jp/books/9784814400362/)
   - オライリーのTypeScript入門書
   - JavaScriptはすでに知っている人向け
+
+
+# アンケートのおねがい
+
+[こちらからお願いします](https://forms.gle/R4bw5GA2vgWuiovn9)

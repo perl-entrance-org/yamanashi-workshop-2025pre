@@ -206,11 +206,11 @@ ___
 ## コマンド集(start)
 ### [Windowsユーザ向け]
 ```bash
-$ start .
+$ explorer.exe .
 ```
-`start [DIRECTORY]`で、`DIRECTORY`をExplorerというファイルマネージャで開きます。
+`explorer.exe [DIRECTORY]`で、`DIRECTORY`をExplorerというファイルマネージャで開きます。
 
-`start`は対象となるファイルの種類によって動作が変わります。
+`explorer.exe`は対象となるファイルの種類によって動作が変わります。
 
 例えばディレクトリが対象ならば上記のようにExplorerで表示、テキストならばテキストエディタで表示...  という動作をします。
 
@@ -229,15 +229,15 @@ $ open .
 
 ___
 ## 練習問題
-1. **ホームディレクトリ**に`perl-entrance`というディレクトリを作りましょう。
+1. **ホームディレクトリ**に`yamanashi-programming`というディレクトリを作りましょう。
 
   ホームディレクトリとは、ユーザごとに用意された作業場所のようなものです。
 
   `cd`とだけ入力してエンターキーを押すと、ホームディレクトリに移動します。
 
-2. 作った`perl-entrance`ディレクトリの中に移動しましょう。
+2. 作った`yamanashi-progreamming`ディレクトリの中に移動しましょう。
 
-3. **カレントディレクトリ**のパスを`pwd`で表示し、その後に、`start`もしくは`open`を使って、ファイルマネージャで開いてみましょう。
+3. **カレントディレクトリ**のパスを`pwd`で表示し、その後に、`explorer.exe`もしくは`open`を使って、ファイルマネージャで開いてみましょう。
 
     現在いるディレクトリをカレントディレクトリと言います。
 
@@ -298,6 +298,14 @@ ___
 
 1. 英語表記に戻す場合には、1. から en を選択することで英語メニューになります。
 
+### WSL2の設定
+
+WindowsでWSL2を使っている場合、Visual Studio CodeをWSL2の環境で使うことができます。
+1. Visual Studio Codeを起動し、左側のメニューから拡張機能(Extensions)を選択します。
+1. 検索バーに「Remote - WSL」と入力し、拡張機能をインストールします。
+1. インストール後、左下の緑色のアイコンをクリックし、「Remote-WSL: New Window」を選択します。
+1. これでWSL2の環境でVisual Studio Codeが起動します。
+
 ___
 ## Visual Studio Code
 
@@ -309,7 +317,7 @@ ___
 
 ___
 ## 練習問題
-1. `perl-entrance`ディレクトリ内に`profile.txt`という空のファイルを用意して、Visual Studio Codeで編集します。
+1. `yamanashi-programming`ディレクトリ内に`profile.txt`という空のファイルを用意して、Visual Studio Codeで編集します。
 
   ファイルの中には、「使用したコマンド1つとその説明」、「今使用しているOS」、「使用しているエディタ」を書いて保存します。
 

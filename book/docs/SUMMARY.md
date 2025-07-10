@@ -1,8 +1,13 @@
 # Summary
 
-* [Introduction](README.md)
-* [ターミナルとシェル入門](terminal_shell.md)
-* [環境構築](SETUP.md)
+#### 山梨プログラミング入学式 #0
+* [ようこそ](README.md)
+
+---
+#### プログラミングの手前入門
+* [ターミナルとシェル入門](setup/terminal_shell.md)
+* [エディタ入門](setup/editor.md)
+* [環境構築](setup/setup.md)
 
 ---
 #### プログラミング/Web入門
