@@ -8,6 +8,7 @@ https://houtoupm.connpass.com/event/356947/ の資料です
 
 # ディレクトリ
 - [docs](docs)
-    - 講義資料です
+    - 講義資料の原文です
+    - GitHub Actionsを使って最新がビルドされるようになってます
 - [exercise](exercise)
     - 練習問題です
