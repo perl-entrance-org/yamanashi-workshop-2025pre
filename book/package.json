@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "serve": "honkit serve docs",
-    "build": "honkit build docs ../docs"
+    "build": "honkit build docs build"
   },
   "keywords": [],
   "author": "",

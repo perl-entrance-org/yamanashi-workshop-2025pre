@@ -1,0 +1,77 @@
+name: Build and Deploy GitBook to GitHub Pages
+
+# ワークフローが実行されるトリガー
+on:
+  # mainブランチへのpush時に実行
+  push:
+    branches:
+      - main
+  # Actionsタブから手動で実行できるようにする
+  workflow_dispatch:
+
+# GITHUB_TOKENの権限を設定
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# デプロイが重複しないように制御
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+# 実行するジョブを定義
+jobs:
+  build-and-deploy:
+    # デプロイ先の環境情報を設定
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # 実行環境を指定
+    runs-on: ubuntu-latest
+    steps:
+      # 1. リポジトリのソースコードをチェックアウト
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. pnpmをセットアップ
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8 # 必要に応じてpnpmのバージョンを指定
+
+      # 3. Node.jsをセットアップ (pnpmのキャッシュを有効化)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # プロジェクトに合わせたNode.jsのバージョンを指定
+          cache: 'pnpm'
+          # キャッシュのキーとして `book` ディレクトリ内のロックファイルを使用
+          cache-dependency-path: 'book/pnpm-lock.yaml'
+
+      # 4. 依存パッケージをインストール (bookディレクトリ内で実行)
+      - name: Install dependencies
+        run: pnpm install
+        # 作業ディレクトリを `book` に指定
+        working-directory: ./book
+
+      # 5. GitBookをビルド (bookディレクトリ内で実行)
+      - name: Build GitBook
+        run: pnpm build # package.jsonのbuildスクリプトを実行
+        working-directory: ./book
+
+      # 6. GitHub Pagesへのデプロイ準備
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # 7. ビルド成果物 (book/docs) をアーティファクトとしてアップロード
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # ここで生成されたdocsディレクトリを指定
+          path: ./book/build
+
+      # 8. GitHub Pagesへデプロイ
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
