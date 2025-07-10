@@ -10,6 +10,39 @@
 
 ## macOS/Windows共通編
 
+
+### bashの場合
+
+`.bashrc`に追加、もしくは編集してください。
+
+```bash
+if type mise &>/dev/null; then
+  eval "$(mise activate bash)"
+  eval "$(mise activate --shims)" 
+fi
+```
+
+なおmiseを`brew`以外で入れた場合は以下の行を`if type mise`の前の行に加えてください
+
+```bash
+export PATH="$HOME/.local/bin:$PATH"
+```
+
+### zshの場合
+
+```zsh
+if type mise &>/dev/null; then
+  eval "$(mise activate zsh)"
+  eval "$(mise activate --shims)" 
+fi
+```
+
+なおmiseを`brew`以外で入れた場合は以下の行を`if type mise`の前の行に加えてください
+
+```bash
+export PATH="$HOME/.local/bin:$PATH"
+```
+
 ### Node.jsとv8
 ![](https://nodejs.org/static/logos/nodejsDark.svg)
 
@@ -27,15 +60,33 @@ Node.jsはサーバーサイドのJavaScriptを実行するための環境であ
 ちなみにV8はあのV8由来です。 ~~V8を讃えよ~~
 
 ### mise
-実際の開発ではNode.jsもプロジェクトによって様々なバージョンを利用することが多いです。
-すなわち複数のNode.jsを切り替えて利用することが実際の現場では多いです。
-またNode.jsはOSが使っていることは稀ですが、 PythonやPerlなどのスクリプト言語はOSの一部として動作している環境と開発で利用する環境を分けて利用したいというケースが多いです。
+実際の開発ではNode.jsもプロジェクトによって使われているバージョンはバラバラです。
+これらのプロジェクトを1つのマシンで開発するので、複数のNode.jsを切り替えて利用することが実際の現場では多いです。
+またNode.jsはOSが使っていることは稀ですが、 PythonやPerlなどのスクリプト言語はOSの一部として動作している環境と開発で利用する環境を分けて利用したいというケースもあります。
 
 このような複数のバージョンの処理系を管理し使うためのツールとしてNode.jsの場合[nvm](https://github.com/nvm-sh/nvm)や[nodenv](https://github.com/nodenv/nodenv)などのバージョン管理ツールが存在しますが、ここでは[mise](https://mise.jdx.dev/)というツールを使用します。
 
 mise(ミーズ)とは開発に必要な様々なものを一元管理してくれるツールです。
 言語のバージョン管理や、よく使われる周辺ツール、タスクの管理まですることが出来ます。
 asdfというツールを参考にRustという言語で実装されており、非常に高速に動作することがウリです。
+
+
+### コマンドの表記について
+
+コマンドの表記は以下のようにします。a
+
+```bash
+$ 実際に入力するコマンド
+```
+
+`$`は一般ユーザーのコマンドラインのプロンプト(今は入力できますよというマーク)を表しており、実際には入力しません。
+したがって次のような表記があった場合、ターミナルには`ls`と入力してください。
+
+```bash
+$ ls
+```
+
+このハンズオンでは出てきませんが、`#`から始まった場合、rootユーザーのコマンドラインのプロンプトを表しています。
 
 ### macOS
 
@@ -54,3 +105,8 @@ $ curl https://mise.run | sh
 $ mise use -g node@22
 ```
 
+`-g`はグローバルにインストールするオプションです。
+`node@22`はNode.jsのバージョン22をインストールすることを意味します。
+
+今回は利用しませんが、miseはディレクトリごとに利用する言語のバージョンを切り替えることもできます。
+様々なプロジェクトを開発する場合は、プロジェクトごとにNode.jsのバージョンを切り替えることができるので便利です。

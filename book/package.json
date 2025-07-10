@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "serve": "honkit serve docs",
-    "build": "honkit build docs build"
+    "build": "honkit build docs ../docs"
   },
   "keywords": [],
   "author": "",
@@ -18,8 +18,10 @@
     "gitbook-plugin-copy-code-button": "^0.0.2",
     "gitbook-plugin-hide-published-with": "^0.0.1",
     "gitbook-plugin-intopic-toc": "^1.1.1",
+    "gitbook-plugin-js-console": "^3.2.0",
     "gitbook-plugin-mermaid-newface": "^4.1.0",
     "honkit": "^6.0.3",
-    "honkit-plugin-prism": "^2.5.3"
+    "honkit-plugin-prism": "^2.5.3",
+    "honkit-plugin-sandpack": "^1.4.0"
   }
 }

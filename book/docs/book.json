@@ -10,7 +10,9 @@
     "copy-code-button",
     "intopic-toc",
     "back-to-top-button",
-    "mermaid-newface"
+    "mermaid-newface",
+    "js-console",
+    "sandpack"
   ],
   "pluginsConfig": {
     "prism": {
