@@ -30,7 +30,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 ### zshの場合
 
-```zsh
+```bash
 if type mise &>/dev/null; then
   eval "$(mise activate zsh)"
   eval "$(mise activate --shims)" 

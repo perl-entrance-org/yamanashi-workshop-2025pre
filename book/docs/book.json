@@ -1,6 +1,6 @@
 {
-  "title":"タイトル",
-  "description" :"詳細説明",
+  "title":"【プレ開催】山梨プログラミング入学式 ~TypeScript入門編~",
+  "description" :"2025/07/12実施のハンズオンでの資料です",
   "language":"ja",
   "plugins":[
     "prism",
@@ -10,9 +10,9 @@
     "copy-code-button",
     "intopic-toc",
     "back-to-top-button",
-    "mermaid-newface",
     "js-console",
-    "sandpack"
+    "sandpack",
+    "hints"
   ],
   "pluginsConfig": {
     "prism": {
