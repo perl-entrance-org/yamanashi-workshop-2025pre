@@ -29,6 +29,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     # 実行環境を指定
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: book
     steps:
       # 1. リポジトリのソースコードをチェックアウト
       - name: Checkout
@@ -46,19 +49,15 @@ jobs:
         with:
           node-version: '20' # プロジェクトに合わせたNode.jsのバージョンを指定
           cache: 'pnpm'
-          # キャッシュのキーとして `book` ディレクトリ内のロックファイルを使用
-          cache-dependency-path: 'book/pnpm-lock.yaml'
+          cache-dependency-path: 'pnpm-lock.yaml'
 
       # 4. 依存パッケージをインストール (bookディレクトリ内で実行)
       - name: Install dependencies
         run: pnpm install
-        # 作業ディレクトリを `book` に指定
-        working-directory: ./book
 
       # 5. GitBookをビルド (bookディレクトリ内で実行)
       - name: Build GitBook
-        run: pnpm build # package.jsonのbuildスクリプトを実行
-        working-directory: ./book
+        run: pnpm build 
 
       # 6. GitHub Pagesへのデプロイ準備
       - name: Setup Pages
@@ -68,8 +67,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # ここで生成されたdocsディレクトリを指定
-          path: ./book/build
+          path: ./build
 
       # 8. GitHub Pagesへデプロイ
       - name: Deploy to GitHub Pages
