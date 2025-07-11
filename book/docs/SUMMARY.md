@@ -7,7 +7,6 @@
 #### プログラミングの手前入門
 * [ターミナルとシェル入門](setup/terminal_shell.md)
 * [エディタ入門](setup/editor.md)
-* [環境構築](setup/setup.md)
 
 ---
 #### プログラミング/Web入門
@@ -18,6 +17,7 @@
 ---
 #### JavaScriptの基礎
 * [JavaScriptとは一体なんなのか](js-intro/about.md)
+* [環境構築](js-intro/setup.md)
 * [JavaScript入門](js-intro/01-introduction.md)
 * [オブジェクト](js-intro/02-object.md)
 

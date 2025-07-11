@@ -52,7 +52,7 @@ JavaScriptのサーバー用途の実行環境にはNodejs, Deno, Bunなどが�
 
 <img src="https://v8.dev/_img/v8.svg" alt="ロゴの説明" width="150" />
 
-Node.jsはV8というGoogleが開発したJavaScriptエンジンを使ってJavaScriptを実行するための環境です。
+Node.jsはV8というGoogleが開発したJavaScriptエンジン(JavaScriptを実際に解釈するもの)を使ってJavaScriptを実行するための環境です。
 V8はGoogle ChromeやChromiumなどのWebブラウザでも使われているJavaScriptエンジンで、非常に高速にJavaScriptを実行することができます。
 Node.jsはサーバーサイドのJavaScriptを実行するための環境であり、Webアプリケーションの開発や、CLIツールの開発などに広く使われています。
 そのためブラウザで動くJavaScriptと違い、 HTMLを操作するDOM APIなどのWeb APIがなく、代わりにファイルシステムを操作したり、 HTTPサーバーを立てたりするためのAPIが提供されています。
