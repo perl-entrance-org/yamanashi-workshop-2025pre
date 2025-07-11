@@ -9,10 +9,9 @@
 * [エディタ入門](setup/editor.md)
 
 ---
-#### プログラミング/Web入門
+#### Web入門
 * [web入門](web/introduction.md)
 * [HTML入門](web/html.md)
-* [プログラミング入門](web/programming.md)
 
 ---
 #### JavaScriptの基礎
