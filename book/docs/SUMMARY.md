@@ -18,7 +18,9 @@
 #### JavaScriptの基礎
 * [JavaScriptとは一体なんなのか](js-intro/about.md)
 * [環境構築](js-intro/setup.md)
-* [JavaScript入門](js-intro/01-introduction.md)
+* [数値、文字列、四則演算、変数](js-intro/01-introduction.md)
+* [データ型](js-intro/data.md)
+* [条件分岐](js-intro/if.md)
 * [オブジェクト](js-intro/02-object.md)
 
 ---

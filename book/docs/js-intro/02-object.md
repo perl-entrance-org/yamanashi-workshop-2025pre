@@ -1,7 +1,6 @@
 # JavaScritpのオブジェクトとは
 
-JavaScriptではプリミティブ型でないものはすべてオブジェクトでした。
-ではオブジェクトとは一体どのようなものでしょうか。
+JavaScriptで
 
 JavaScriptのオブジェクトとは**プロパティの集まり**のことであり、プロパティは**名前(key)と値(value)の組**の概念です。
 これは他の言語で言うところの連想配列、ハッシュ、辞書などと呼ばれるものと近いです。(連想配列として使うとちょっと微妙なので、あくまで近いもの、として理解しましょう)
@@ -115,25 +114,42 @@ console.log(obj);
 
 ### 練習問題
 
-- `object_practice.js`というファイルを作りましょう
-- これらの値の組を持つオブジェクト`haruno`を作りましょう
+
+- `object_practice`というディレクトリを作りましょう
+- 次のソースコードをコピペし、それぞれ保存してください、
+
+`example.html`
+
+```html
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>オブジェクトのテスト</title>
+        <script src="./script.js"></script>
+    </head>
+    <body>
+        コンソールをひらいてね!
+    </body>
+</html>
+```
+
+`script.js`
+```javascript
+// ここになんかかく
+```
+
+- 以下の値の組を持つオブジェクト`haruno`を作りましょう
     - key: `car`, value: `pao`
     - key: `pet`, value: `cat`
-- まずは`haruno`の中身をすべて表示してみましょう
-- 次に`haruno`オブジェクトの`pet`valueだけ表示してみましょう
+- まずは`haruno`の中身をすべて`console.log`で表示してみましょう
+- 次に`haruno`オブジェクトの`pet`valueだけ`console.log`で表示してみましょう
 
 
-## constふたたび
+## constとオブジェクト
 
 `const`はあくまで変数の再代入を禁止する宣言であり、定数の宣言とは異なります。
-したがってオブジェクトや配列を宣言した場合は破壊的に値を書き換えることが可能です。
+したがってオブジェクトを破壊的に値を書き換えることが可能です。
 
-<!-- js-console -->
-```js
-const cinephoto = ['satuki', 'ann'];
-cinephoto.push('sakurako'); // 配列に破壊的に値を追加可能
-console.log(cinephoto); // 'satuki', 'ann', 'sakurako'
-```
 
 オブジェクトの場合はフィールドに対しての再代入が可能です。
 

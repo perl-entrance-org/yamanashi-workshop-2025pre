@@ -12,19 +12,13 @@
     "back-to-top-button",
     "js-console",
     "sandpack",
-    "hints",
-    "mermaid-hybrid"
+    "hints"
   ],
   "pluginsConfig": {
     "prism": {
       "css": [
         "prismjs/themes/prism-tomorrow.css"
       ]
-    },
-    "mermaid-hybrid": {
-      "plugin": {
-        "embed": false
-      }
     }
   }
 }
