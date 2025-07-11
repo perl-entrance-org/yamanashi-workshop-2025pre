@@ -21,7 +21,12 @@
 * [データ型](js-intro/data.md)
 * [条件分岐](js-intro/if.md)
 * [オブジェクト](js-intro/02-object.md)
+* [関数](js-intro/function.md)
+
+---
+### DOM/フロントエンドアプリケーション入門
 * [DOM入門](js-intro/dom.md)
+* [vite入門](js-intro/vite.md)
 
 ---
 * [さらに学ぶには](finish.md)
