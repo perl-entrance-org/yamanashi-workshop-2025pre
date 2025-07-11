@@ -34,7 +34,7 @@ https://github.com/perl-entrance-org/workshop-2020/blob/master/1st/part1.md
 ## Linuxか? macOSか?
 Linuxの利点は、基本的に無料で使えるという点です。
 
-先進的な要素が多い<ruby>Ubuntu<rt>ウブンツ</rt></ruby>、安定稼働を重視して利用される<ruby>CentOS<rt>セントオーエス</rt></ruby>など、多くの種類(ディストリビューション)が存在します。
+先進的な要素が多い<ruby>Ubuntu<rt>ウブンツ</rt></ruby>、自分でOSを組み立てていく楽しみがある<ruby>ArchLinux<rt>アーチリナックス</rt></ruby>など、多くの種類(ディストリビューション)が存在します。
 
 また、ネットワーク上で様々なサービスを提供する「サーバー」のOSとして高いシェアがあります。
 

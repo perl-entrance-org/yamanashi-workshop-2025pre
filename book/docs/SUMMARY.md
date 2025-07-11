@@ -21,6 +21,7 @@
 * [データ型](js-intro/data.md)
 * [条件分岐](js-intro/if.md)
 * [オブジェクト](js-intro/02-object.md)
+* [DOM入門](js-intro/dom.md)
 
 ---
 * [さらに学ぶには](finish.md)
