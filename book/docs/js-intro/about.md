@@ -24,6 +24,10 @@ JavaScriptはブラウザで動作するプログラミング言語ですが、�
 
 1つがJavaScriptの基本的な仕様であるECMAScript、もう1つがDOMの操作などを含んだ Web APIです。
 
+
+<img src="browser_js.png" >
+
+
 ## ECMAScript
 
 ECMAScriptとはJavaScriptの別名であり、JavaScriptの仕様の名前として今は使われています。
@@ -126,7 +130,7 @@ IEはWindowsの新バージョンのリリース時などにしか更新され�
 そこでモダンな文法や書きやすい機能を実装した別の言語でプログラミングをし、それをJavaScriptのソースコードに変換するという手法が台頭しました。
 このようにあるプログラミング言語のソースコードを別のプログラミング言語のソースコードに変換すること一般的に「**トランスパイル**」、と言い、特にJavaScriptの代替となるようなプログラミング言語のことをAlternative JavaScript、通称**AltJS**と呼ぶようになりました。
 
-<img src="trans.drawio.svg" />
+<img src="trans.drawio.svg" >
 
 {% hint style='tip' %}
 TypeScriptの入門書などを読んでいると、TypeScriptからJavaScritpに変換するトランスパイルのことを「**コンパイル**」と読んでいる書籍もあります。
