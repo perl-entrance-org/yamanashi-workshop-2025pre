@@ -85,7 +85,7 @@ JavaScriptでは関数は`function 関数名(引数)`と書くことで宣言で
 
 引数を必要としない場合は`()`の中身は省略できます。
 
-```js
+```javascript
 function 関数名(){
     ...
 }
@@ -225,6 +225,11 @@ greet("Bob"); // "Hello, Bob!" と表示される
 
 # 関数式
 
+JavaScriptでは、関数を変数に代入することもできます。これを関数式と呼びます。
+この定義を見ると右側の`function`の部分が関数名を持たないことに気づくかもしれません。
+関数名を持たない関数は「無名関数」と呼ばれ、変数に代入したり、他の関数の引数として渡すことができます。
+
+
 ```js
 const 変数名 = function() {
     // 関数の処理...
@@ -232,37 +237,76 @@ const 変数名 = function() {
 };
 ```
 
+<!-- js-console -->
+```js
+const add = function(a, b) {
+    return a + b; // 関数の処理
+};
+const result = add(5, 3); // resultは8になる
+console.log(result);
+
+const double = function(x) {
+    return x * 2; // 引数を2倍にする関数
+};
+
+console.log(double(add(5,3)));
+```
+
 
 # アロー関数式
-アロー関数は、JavaScriptの関数をより簡潔に書くための構文です。
+アロー関数は、JavaScriptの関数をより簡潔に書くための導入された構文です。
 `function`での関数定義より後に作られたため、(今回は説明しませんでしたが)`function`特有の罠をいくつか回避した実装になっています。
 
 アロー関数は、アロー(矢印)の名前の通り`=>`を使った定義になります。
 
 
+<!-- js-console -->
 ```javascript
 const add = (a, b) => a + b; // アロー関数の定義
 const result = add(5, 3); // resultは8になる
 console.log(result); // 8 と表示される
 ```
 
-# アロー関数の特徴
-- アロー関数は、`function`キーワードを使わずに関数を定義できます。
-- アロー関数は、`this`の値をレキシカルに束縛します。つまり、アロー関数が定義された場所の`this`を参照します。
-- アロー関数は、引数が1つだけの場合、括弧を省略できます。
-- アロー関数の本体が1行だけの場合、波括弧と`return`キーワードを省略できます。
+また、引数が1つだけの場合は、括弧を省略することもできます。
 
+<!-- js-console -->
 ```javascript
-const square = x => x * x; // 引数が1つのアロー関数
+const square = x =>  { return x * x; } // 引数が1つのアロー関数
 let squared = square(4); // squaredは16になる
 console.log(squared); // 16 と表示される
 ```
 
+さらに複数行の処理を行わない場合は、波括弧を省略することもできます。
+
+<!-- js-console -->
+```javascript
+const greet = name => `Hello, ${name}!`; // 波括弧を省略したアロー関数
+console.log(greet("Sakurako"));
+```
+
 # functionとアロー関数の使い分け
+アロー関数の方が後発かつ`function｀と書かなくてよいので、アロー関数を好んで使う人もいます。
+
+ただしアロー関数の場合、functionと違い定義より前に呼び出すことができません。
+
+<!-- js-console -->
+```javascript 
+console.log(add(5, 3)); // エラーにならない
+function add(a, b) {
+    return a + b; // 関数の処理
+}
+```
+
+<!-- js-console -->
+```javascript 
+console.log(add(5, 3)); // エラーになる
+const add = (a, b) => a + b; // アロー関数の定義
+```
 
 
-# まとめ
-関数は、JavaScriptの重要な要素であり、コードの再利用性と可読性を向上させます。引数や返り値を使ってデータを受け渡し、スコープを理解することで、より効果的に関数を活用できます。また、アロー関数を使うことで、より簡潔なコードを書くことができます。
-
-
+<!-- js-console -->
+```javascript 
+const add = (a, b) => a + b; // アロー関数の定義
+console.log(add(5, 3)); // エラーになる
+```
 

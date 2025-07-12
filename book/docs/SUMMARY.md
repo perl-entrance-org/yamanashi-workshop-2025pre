@@ -28,5 +28,10 @@
 * [DOM入門](js-intro/dom.md)
 * [vite入門](js-intro/vite.md)
 
+
+---
+### TypeScript入門
+* [TypeScript入門](ts-intro/about.md)
+
 ---
 * [さらに学ぶには](finish.md)
