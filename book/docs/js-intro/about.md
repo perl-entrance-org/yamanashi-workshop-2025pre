@@ -183,14 +183,14 @@ jQueryそのものはTypeScriptの型定義も提供されており、TypeScript
 
 # 必ずフロントエンドではJavaScriptを書かないといけないのか
 
-フロントエンドでは必ずJavaScript/TypeScriptを使わないといけなかというとそんなことはないです
-実際いくつかJavaScriptを書かずともリッチなフロントエンドが実装できるライブラリが存在します
+フロントエンドでは必ずJavaScript/TypeScriptを使わないといけないかというと、そんなことはありません。
+実際いくつかJavaScriptを書かずともリッチなフロントエンドが実装できるライブラリが存在します。
 - Hotwire
-    - 主にRuby on RailsというWebアプリケーションフレームワークで利用される
+    - 主にRuby on RailsというWebアプリケーションフレームワークで利用されます
 - htmx
-    - HTMLのようなシンタックスでJavaScriptのような動きを抑制できる
+    - HTMLのようなシンタックスでJavaScriptのような動きを抑制できます
 - Alpine.js
-    - htmxと同じようにhtmlを若干拡張したような構文でモダンなフロントエンドを作れる
+    - htmxと同じようにhtmlを若干拡張したような構文でモダンなフロントエンドを作れます
 
 またWebAssemblyという技術も台頭しています。これは、CやRust, Rubyなどで書いたコードをバイナリに変換しそれをブラウザが解釈するというものです。
 最終的にはブラウザが解釈することもあり、JavaScriptを書かなくてもDOM操作ができます。
