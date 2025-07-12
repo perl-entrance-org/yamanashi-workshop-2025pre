@@ -68,3 +68,95 @@ $ npm create vite@latest
 
 次のような画面が現れたら、矢印キーの上下でVanillaに印を合わせてエンターを押しましょう。
 Vanillaとはシンプルなバニラソフトクリームのように、他のライブラリを使わないシンプルな構成のことを言います。
+
+
+
+srcディレクトリの下に`counter.js`があります。見てみましょう。
+
+```javascript
+export function setupCounter(element) {
+  let counter = 0
+  const setCounter = (count) => {
+    counter = count
+    element.innerHTML = `count is ${counter}`
+  }
+  element.addEventListener('click', () => setCounter(counter + 1))
+  setCounter(0)
+}
+```
+
+これは`element`を引数で取得し、その`element`に`addEventListener`しています。
+`addEventListener`とは、そのelementに対するイベント(ユーザーがなんらかの操作をした際に発生するもの)と、イベント時に実行する関数を設定できるものです。
+
+ここではクリック時に`setCounter`関数を`counter + 1`の結果を引数として渡しています。
+
+## 練習問題
+
+ここではボタンをクリックすると表示内容が変わるプログラムを作ってみます。
+
+main.jsの中身を次のようにしましょう
+
+```javascript
+import './style.css'
+import javascriptLogo from './javascript.svg'
+import viteLogo from '/vite.svg'
+import { setupCounter, setupMyTitle } from './counter.js'
+
+document.querySelector('#app').innerHTML = `
+  <div>
+    <a href="https://vite.dev" target="_blank">
+      <img src="${viteLogo}" class="logo" alt="Vite logo" />
+    </a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
+    </a>
+    <h1>Hello Vite!</h1>
+    <div class="card">
+      <button id="counter" type="button"></button>
+    </div>
+    <div class="card">
+      <button id="mono" type="button">mono</button>
+      <button id="yurucamp" type="button">ゆるキャン</button>
+      <p id="title"></title>
+    </div>
+    <p class="read-the-docs">
+      Click on the Vite logo to learn more
+    </p>
+  </div>
+`
+
+setupCounter(document.querySelector('#counter'))
+setupMyTitle(document.querySelector('#mono'), document.querySelector('#yurucamp'), document.querySelector('#title'))
+```
+
+次にcounter.jsの中身を次のようにしましょう。
+
+```js
+export function setupCounter(element) {
+  let counter = 0
+  const setCounter = (count) => {
+    counter = count
+    element.innerHTML = `count is ${counter}`
+  }
+  element.addEventListener('click', () => setCounter(counter + 1))
+  setCounter(0)
+}
+
+export function setupMyTitle(monoElement, yuruElement, htmlResultValue) {
+  let counter = 0
+  const setMono = () => {
+    htmlResultValue.innerHTML = `mono`
+  }
+
+  const setYuru = () => {
+    htmlResultValue.innerHTML = `ゆるキャン`
+  }
+
+  monoElement.addEventListener('click', () => setMono())
+  yuruElement.addEventListener('click', () => setYuru())
+  htmlResultValue.innerHTML = `未設定`
+}
+```
+
+1. ボタンをクリックするとどのような表示になるか確認しましょう
+1. 新しく「スーパーカブ」に変化するボタンを作ってみましょう
