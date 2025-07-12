@@ -73,3 +73,18 @@ function add(left: number, right: number): number {
 }
 console.log(add(1, 2, 3)); 
 ```
+
+## 配列の保護
+
+TypeScriptでは、配列の型を指定することができます。
+
+```typescript
+const 配列名: それぞれの型[] = [...];
+```
+
+さらに`readonly`をつけることで、配列を変更できないようにすることもできます。
+
+```typescript
+const animations : readonly string[] = ['mono', 'ゆるキャン'];
+animations.push('ラブライブサンシャイン'); // エラーになる
+```

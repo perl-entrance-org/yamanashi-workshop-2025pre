@@ -22,6 +22,15 @@ console.log(fruits[0]); // 'apple'
 console.log(fruits[1]); // 'banana'
 ````
 
+存在しないインデックスにアクセスすると`undefined`が返されます。
+
+<!-- js-console -->
+```js
+const fruits = ['apple', 'banana', 'orange'];
+console.log(fruits[3]); // undefined
+```
+
+
 ### 配列の要素の追加と削除
 配列に要素を追加するには、`push`メソッドを使います。
 
