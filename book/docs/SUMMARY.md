@@ -22,6 +22,7 @@
 * [条件分岐](js-intro/if.md)
 * [オブジェクト](js-intro/02-object.md)
 * [関数](js-intro/function.md)
+* [配列](js-intro/array.md)
 
 ---
 ### DOM/フロントエンドアプリケーション入門
