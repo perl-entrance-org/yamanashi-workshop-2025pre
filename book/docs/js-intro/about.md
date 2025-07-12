@@ -42,14 +42,14 @@ ECMAScriptで定義されているものは次のような言語のコアとな�
 
 # JavaScriptの歴史
 
-JavaScritpを学ぶ前に、 JavaScriptがどういった歴史を辿っている言語なのか見てみましょう。
+JavaScriptを学ぶ前に、 JavaScriptがどういった歴史を辿っている言語なのか見てみましょう。
 
 ## 第1章：誕生と長い沈黙 (1997年～2009年)
 
 ### 始まりは「ブラウザ戦争」の仲裁
 
 JavaScriptはブラウザで動作する言語ですが、最初はNetscape社のブラウザ専用で開発されていました。(今のFireFoxの元になっているブラウザです)
-1996年にはMicrosoftがInternert Explorer 3.0をリリースしました。
+1996年にはMicrosoftがInternet Explorer 3.0をリリースしました。
 IE3には「JScript」というJavaScriptに似た言語が実装されていましたが、微妙にNetscapeのJavaScriptとは異なる挙動をしました。
 そのため開発者はどちらのブラウザでも動くコードを書くのに苦労していました。
 この混乱を収めるため、国際的な標準化団体である**Ecma International**が乗り出し、1997年に仕様の初版の「**ECMAScript 1 (ES1)**」を発行しました。
