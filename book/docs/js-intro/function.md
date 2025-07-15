@@ -307,6 +307,6 @@ const add = (a, b) => a + b; // アロー関数の定義
 <!-- js-console -->
 ```javascript 
 const add = (a, b) => a + b; // アロー関数の定義
-console.log(add(5, 3)); // エラーになる
+console.log(add(5, 3)); // エラーにならない
 ```
 
