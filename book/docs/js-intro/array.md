@@ -20,7 +20,7 @@ console.log(fruits); // ['apple', 'banana', 'orange']
 const fruits = ['apple', 'banana', 'orange'];
 console.log(fruits[0]); // 'apple'
 console.log(fruits[1]); // 'banana'
-````
+```
 
 存在しないインデックスにアクセスすると`undefined`が返されます。
 
